@@ -1,8 +1,11 @@
+import { profile } from '../data'
+
 export default function Footer() {
   return (
     <footer>
       <div className="wrap footer-row">
-        <span className="mono">© 2026 Ludwig Rex Olarte</span>
+        <span>© 2026 {profile.name}</span>
+        <a href="#top">Back to top ↑</a>
       </div>
     </footer>
   )

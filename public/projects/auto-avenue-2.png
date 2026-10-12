@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="poBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#poBgGrad)"/>
+
+  <!-- Left Sidebar -->
+  <rect x="0" y="0" width="240" height="750" fill="#0b1120" stroke="#1e293b" stroke-width="1"/>
+  <g transform="translate(24, 28)">
+    <rect width="36" height="36" rx="8" fill="#3b82f6"/>
+    <path d="M10 26 L18 10 L26 26 M14 20 L22 20" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <text x="46" y="22" font-family="'Instrument Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff">AutoAvenue</text>
+    <text x="46" y="34" font-family="'Instrument Sans', sans-serif" font-size="10" font-weight="600" fill="#3b82f6">IMS SYSTEM</text>
+  </g>
+
+  <!-- Top App Header -->
+  <rect x="240" y="0" width="960" height="70" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="265" y="42" font-family="'Instrument Sans', sans-serif" font-size="20" font-weight="700" fill="#ffffff">Purchase Orders &amp; Supplier Shipments</text>
+
+  <!-- Purchase Orders Table & Analytics -->
+  <g transform="translate(265, 95)">
+    <!-- PO Metric Summary -->
+    <g transform="translate(0, 0)">
+      <rect width="285" height="85" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="20" y="32" font-family="'Instrument Sans', sans-serif" font-size="12" fill="#94a3b8">TOTAL ACTIVE POs</text>
+      <text x="20" y="62" font-family="'Instrument Sans', sans-serif" font-size="24" font-weight="700" fill="#3b82f6">16 Orders</text>
+    </g>
+    <g transform="translate(305, 0)">
+      <rect width="285" height="85" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="20" y="32" font-family="'Instrument Sans', sans-serif" font-size="12" fill="#94a3b8">IN-TRANSIT SHIPMENTS</text>
+      <text x="20" y="62" font-family="'Instrument Sans', sans-serif" font-size="24" font-weight="700" fill="#10b981">6 Arriving Today</text>
+    </g>
+    <g transform="translate(610, 0)">
+      <rect width="295" height="85" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="20" y="32" font-family="'Instrument Sans', sans-serif" font-size="12" fill="#94a3b8">MONTHLY PROCUREMENT</text>
+      <text x="20" y="62" font-family="'Instrument Sans', sans-serif" font-size="24" font-weight="700" fill="#f8fafc">₱219,800.00</text>
+    </g>
+
+    <!-- PO Table -->
+    <g transform="translate(0, 110)">
+      <rect width="905" height="490" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <path d="M0 0 h905 v42 h-905 z" fill="#111827"/>
+      <g transform="translate(20, 26)" font-family="'Instrument Sans', sans-serif" font-size="11" font-weight="700" fill="#64748b">
+        <text x="0" y="0">PO NUMBER</text>
+        <text x="130" y="0">SUPPLIER</text>
+        <text x="360" y="0">ITEMS COUNT</text>
+        <text x="510" y="0">ORDER TOTAL</text>
+        <text x="680" y="0">DELIVERY STATUS</text>
+        <text x="820" y="0">ACTION</text>
+      </g>
+
+      <!-- Row 1 -->
+      <g transform="translate(20, 75)" font-family="'Instrument Sans', sans-serif" font-size="13">
+        <text x="0" y="0" font-family="monospace" font-weight="700" fill="#3b82f6">PO-2026-081</text>
+        <text x="130" y="0" font-weight="600" fill="#f8fafc">Denso Philippines Corp.</text>
+        <text x="360" y="0" fill="#94a3b8">45 Spark Plugs, 20 Relays</text>
+        <text x="510" y="0" font-weight="700" fill="#f8fafc">₱64,500.00</text>
+        <rect x="675" y="-14" width="80" height="20" rx="10" fill="#10b981" fill-opacity="0.2"/>
+        <text x="715" y="0" font-size="10" font-weight="700" fill="#10b981" text-anchor="middle">DELIVERED</text>
+        <text x="820" y="0" fill="#3b82f6">View Details ↗</text>
+      </g>
+      <line x1="20" y1="105" x2="885" y2="105" stroke="#334155" stroke-width="1"/>
+
+      <!-- Row 2 -->
+      <g transform="translate(20, 140)" font-family="'Instrument Sans', sans-serif" font-size="13">
+        <text x="0" y="0" font-family="monospace" font-weight="700" fill="#3b82f6">PO-2026-082</text>
+        <text x="130" y="0" font-weight="600" fill="#f8fafc">Brembo Brake Solutions Inc.</text>
+        <text x="360" y="0" fill="#94a3b8">30 Rotor Discs, 40 Pads</text>
+        <text x="510" y="0" font-weight="700" fill="#f8fafc">₱98,200.00</text>
+        <rect x="675" y="-14" width="84" height="20" rx="10" fill="#3b82f6" fill-opacity="0.2"/>
+        <text x="717" y="0" font-size="10" font-weight="700" fill="#60a5fa" text-anchor="middle">IN TRANSIT</text>
+        <text x="820" y="0" fill="#3b82f6">Track Ship ↗</text>
+      </g>
+      <line x1="20" y1="170" x2="885" y2="170" stroke="#334155" stroke-width="1"/>
+
+      <!-- Row 3 -->
+      <g transform="translate(20, 205)" font-family="'Instrument Sans', sans-serif" font-size="13">
+        <text x="0" y="0" font-family="monospace" font-weight="700" fill="#3b82f6">PO-2026-083</text>
+        <text x="130" y="0" font-weight="600" fill="#f8fafc">KYB Suspension Parts Asia</text>
+        <text x="360" y="0" fill="#94a3b8">18 Shock Absorber Sets</text>
+        <text x="510" y="0" font-weight="700" fill="#f8fafc">₱57,100.00</text>
+        <rect x="675" y="-14" width="88" height="20" rx="10" fill="#f59e0b" fill-opacity="0.2"/>
+        <text x="719" y="0" font-size="10" font-weight="700" fill="#f59e0b" text-anchor="middle">PROCESSING</text>
+        <text x="820" y="0" fill="#3b82f6">Review PO ↗</text>
+      </g>
+    </g>
+  </g>
+</svg>

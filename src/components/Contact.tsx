@@ -16,35 +16,40 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="contact">
+    <section id="contact">
       <div className="wrap">
-        <Reveal className="eyebrow">// 04 — contact</Reveal>
-        <Reveal>
-          <h2>Have a system worth building? Let's talk.</h2>
-        </Reveal>
-        <Reveal>
-          <p>
-            Open to internships, junior roles, and collaborative projects — especially anything
-            involving real-world workflows.
+        <Reveal className="contact-card">
+          <p className="label">Contact</p>
+          <h2>
+            Have a system worth <em>building</em>? Let's talk.
+          </h2>
+          <p className="lede">
+            Open to internships, junior roles, and collaborative projects — especially anything involving real-world
+            workflows.
           </p>
-        </Reveal>
 
-        <Reveal className="contact-actions">
-          <a className="btn btn-primary" href={`mailto:${contact.email}`}>
-            Email me
+          <a className="contact-email" href={`mailto:${contact.email}`}>
+            {contact.email}
           </a>
-          <button className="btn btn-ghost" type="button" onClick={handleCopy}>
-            {copyLabel}
-          </button>
-          <a className="btn btn-ghost" href={contact.linkedin} target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
-          <a className="btn btn-ghost" href={contact.github} target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-        </Reveal>
 
-        <p className="mono email-fallback">{contact.email}</p>
+          <div className="contact-actions">
+            <a className="btn btn-ink" href={`mailto:${contact.email}`}>
+              Email me
+            </a>
+            <button className="btn btn-line" type="button" onClick={handleCopy}>
+              {copyLabel}
+            </button>
+            <a className="btn btn-line" href={contact.resume} target="_blank" rel="noopener noreferrer">
+              Resume ↗
+            </a>
+            <a className="btn btn-line" href={contact.linkedin} target="_blank" rel="noopener noreferrer">
+              LinkedIn ↗
+            </a>
+            <a className="btn btn-line" href={contact.github} target="_blank" rel="noopener noreferrer">
+              GitHub ↗
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

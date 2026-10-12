@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="rxBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#rxBgGrad)"/>
+
+  <!-- Left Sidebar -->
+  <rect x="0" y="0" width="250" height="750" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <g transform="translate(24, 28)">
+    <rect width="36" height="36" rx="8" fill="#6366f1"/>
+    <text x="18" y="25" font-family="'Instrument Sans', sans-serif" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">Rx</text>
+    <text x="46" y="22" font-family="'Instrument Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff">MedTrack IMS</text>
+    <text x="46" y="34" font-family="'Instrument Sans', sans-serif" font-size="10" font-weight="600" fill="#818cf8">C++ SYSTEM</text>
+  </g>
+
+  <!-- Sidebar Menu -->
+  <g transform="translate(18, 95)" font-family="'Instrument Sans', sans-serif" font-size="13" font-weight="600">
+    <rect width="214" height="40" rx="8" fill="#1e1b4b" stroke="#4338ca" stroke-width="1"/>
+    <text x="36" y="25" fill="#c7d2fe">💊 Medicine Inventory</text>
+
+    <g transform="translate(0, 48)">
+      <text x="36" y="25" fill="#94a3b8">📋 Prescription Dispensing</text>
+    </g>
+    <g transform="translate(0, 96)">
+      <text x="36" y="25" fill="#94a3b8">💳 POS &amp; Transactions</text>
+    </g>
+    <g transform="translate(0, 144)">
+      <text x="36" y="25" fill="#94a3b8">⚠️ Expiration Tracking</text>
+    </g>
+    <g transform="translate(0, 192)">
+      <text x="36" y="25" fill="#94a3b8">💾 File DB Storage (.dat)</text>
+    </g>
+  </g>
+
+  <!-- Header -->
+  <rect x="250" y="0" width="950" height="70" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="280" y="42" font-family="'Instrument Sans', sans-serif" font-size="20" font-weight="700" fill="#ffffff">Pharmacy Management System</text>
+  <rect x="1000" y="18" width="165" height="34" rx="17" fill="#22c55e" fill-opacity="0.15"/>
+  <circle cx="1015" cy="35" r="5" fill="#22c55e"/>
+  <text x="1030" y="39" font-family="'Instrument Sans', sans-serif" font-size="12" font-weight="700" fill="#4ade80">File Storage Synced</text>
+
+  <!-- Main Body Content -->
+  <g transform="translate(280, 95)">
+    <!-- KPI Row -->
+    <g transform="translate(0, 0)">
+      <rect width="210" height="85" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="18" y="28" font-family="'Instrument Sans', sans-serif" font-size="11" fill="#94a3b8">TOTAL MEDICINES</text>
+      <text x="18" y="58" font-family="'Instrument Sans', sans-serif" font-size="24" font-weight="700" fill="#f8fafc">1,240 SKUs</text>
+    </g>
+    <g transform="translate(225, 0)">
+      <rect width="210" height="85" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="18" y="28" font-family="'Instrument Sans', sans-serif" font-size="11" fill="#94a3b8">DISPENSED TODAY</text>
+      <text x="18" y="58" font-family="'Instrument Sans', sans-serif" font-size="24" font-weight="700" fill="#818cf8">148 Prescriptions</text>
+    </g>
+    <g transform="translate(450, 0)">
+      <rect width="210" height="85" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="18" y="28" font-family="'Instrument Sans', sans-serif" font-size="11" fill="#94a3b8">DAILY SALES REVENUE</text>
+      <text x="18" y="58" font-family="'Instrument Sans', sans-serif" font-size="24" font-weight="700" fill="#34d399">₱42,650.00</text>
+    </g>
+    <g transform="translate(675, 0)">
+      <rect width="215" height="85" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="18" y="28" font-family="'Instrument Sans', sans-serif" font-size="11" fill="#94a3b8">BATCH EXPIRY ALERTS</text>
+      <text x="18" y="58" font-family="'Instrument Sans', sans-serif" font-size="24" font-weight="700" fill="#f87171">4 Batches Soon</text>
+    </g>
+
+    <!-- Medicine Registry Table -->
+    <g transform="translate(0, 110)">
+      <rect width="890" height="490" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <path d="M0 0 h890 v42 h-890 z" fill="#1e1b4b"/>
+      <g transform="translate(20, 26)" font-family="'Instrument Sans', sans-serif" font-size="11" font-weight="700" fill="#a5b4fc">
+        <text x="0" y="0">DRUG CODE</text>
+        <text x="110" y="0">BRAND &amp; GENERIC NAME</text>
+        <text x="360" y="0">DOSAGE FORM</text>
+        <text x="500" y="0">STOCK IN UNIT</text>
+        <text x="640" y="0">EXPIRY DATE</text>
+        <text x="760" y="0">RETAIL PRICE</text>
+      </g>
+
+      <!-- Row 1 -->
+      <g transform="translate(20, 75)" font-family="'Instrument Sans', sans-serif" font-size="13">
+        <text x="0" y="0" font-family="monospace" font-weight="700" fill="#818cf8">MED-0101</text>
+        <text x="110" y="0" font-weight="600" fill="#f8fafc">Amoxicillin Trihydrate (Himox)</text>
+        <text x="360" y="0" fill="#94a3b8">500mg Capsule</text>
+        <text x="500" y="0" font-weight="700" fill="#f8fafc">480 pcs</text>
+        <text x="640" y="0" fill="#34d399">11 / 2026</text>
+        <text x="760" y="0" font-weight="700" fill="#f8fafc">₱14.50</text>
+      </g>
+      <line x1="20" y1="105" x2="870" y2="105" stroke="#1e293b" stroke-width="1"/>
+
+      <!-- Row 2 -->
+      <g transform="translate(20, 140)" font-family="'Instrument Sans', sans-serif" font-size="13">
+        <text x="0" y="0" font-family="monospace" font-weight="700" fill="#818cf8">MED-0102</text>
+        <text x="110" y="0" font-weight="600" fill="#f8fafc">Paracetamol (Biogesic)</text>
+        <text x="360" y="0" fill="#94a3b8">500mg Tablet</text>
+        <text x="500" y="0" font-weight="700" fill="#f8fafc">920 pcs</text>
+        <text x="640" y="0" fill="#34d399">08 / 2027</text>
+        <text x="760" y="0" font-weight="700" fill="#f8fafc">₱8.25</text>
+      </g>
+      <line x1="20" y1="170" x2="870" y2="170" stroke="#1e293b" stroke-width="1"/>
+
+      <!-- Row 3 -->
+      <g transform="translate(20, 205)" font-family="'Instrument Sans', sans-serif" font-size="13">
+        <text x="0" y="0" font-family="monospace" font-weight="700" fill="#818cf8">MED-0205</text>
+        <text x="110" y="0" font-weight="600" fill="#f8fafc">Cetirizine Hydrochloride</text>
+        <text x="360" y="0" fill="#94a3b8">10mg Film-Coated Tab</text>
+        <text x="500" y="0" font-weight="700" fill="#f8fafc">340 pcs</text>
+        <text x="640" y="0" fill="#34d399">05 / 2026</text>
+        <text x="760" y="0" font-weight="700" fill="#f8fafc">₱15.00</text>
+      </g>
+      <line x1="20" y1="235" x2="870" y2="235" stroke="#1e293b" stroke-width="1"/>
+
+      <!-- Row 4 -->
+      <g transform="translate(20, 270)" font-family="'Instrument Sans', sans-serif" font-size="13">
+        <text x="0" y="0" font-family="monospace" font-weight="700" fill="#818cf8">MED-0340</text>
+        <text x="110" y="0" font-weight="600" fill="#f8fafc">Losartan Potassium (Cozaar)</text>
+        <text x="360" y="0" fill="#94a3b8">50mg Tablet</text>
+        <text x="500" y="0" font-weight="700" fill="#f8fafc">610 pcs</text>
+        <text x="640" y="0" fill="#34d399">02 / 2027</text>
+        <text x="760" y="0" font-weight="700" fill="#f8fafc">₱18.75</text>
+      </g>
+      <line x1="20" y1="300" x2="870" y2="300" stroke="#1e293b" stroke-width="1"/>
+
+      <!-- Row 5 -->
+      <g transform="translate(20, 335)" font-family="'Instrument Sans', sans-serif" font-size="13">
+        <text x="0" y="0" font-family="monospace" font-weight="700" fill="#818cf8">MED-0412</text>
+        <text x="110" y="0" font-weight="600" fill="#f8fafc">Mefenamic Acid (Ponstan)</text>
+        <text x="360" y="0" fill="#94a3b8">500mg Capsule</text>
+        <text x="500" y="0" font-weight="700" fill="#f87171">18 pcs (Low)</text>
+        <text x="640" y="0" fill="#f87171">10 / 2026</text>
+        <text x="760" y="0" font-weight="700" fill="#f8fafc">₱19.50</text>
+      </g>
+    </g>
+  </g>
+</svg>
+

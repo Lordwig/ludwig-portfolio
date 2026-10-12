@@ -1,59 +1,63 @@
+import { useState } from 'react'
 import Reveal from './Reveal'
+import { profile, profilePhoto } from '../data'
 
 export default function About() {
+  const [photoFailed, setPhotoFailed] = useState(false)
+
   return (
     <section id="about">
-      <div className="wrap">
-        <Reveal className="sec-head">
-          <div className="eyebrow">// 01 — about</div>
-          <h2>Building with intent, not just finishing assignments.</h2>
+      <div className="wrap about-grid">
+        <Reveal className="about-text">
+          <p className="label">About</p>
+          <h2>
+            Building with <em>intent</em>, not just finishing assignments.
+          </h2>
+          <p>
+            I'm a <strong>BS Information Technology</strong> student at De La Salle Lipa, specializing in{' '}
+            <strong>System Development</strong>. Most of what I build starts from a real, slightly annoying problem —
+            an inventory tracked on paper, a market with no digital presence, records scattered across notebooks — and
+            turns it into something people can rely on.
+          </p>
+          <p>
+            I care about the parts of software that aren't glamorous but matter most: does the login flow make sense,
+            does the dashboard tell you what you need at a glance, does the system survive a real user. That's where I
+            spend my attention.
+          </p>
+
+          <dl className="facts">
+            <div>
+              <dt>Focus</dt>
+              <dd>System Development</dd>
+            </div>
+            <div>
+              <dt>School</dt>
+              <dd>De La Salle Lipa</dd>
+            </div>
+            <div>
+              <dt>Based in</dt>
+              <dd>Philippines</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Open to internships &amp; junior roles</dd>
+            </div>
+          </dl>
         </Reveal>
 
-        <div className="about-grid">
-          <Reveal>
-            <p>
-              I'm a <strong>BS Information Technology</strong> student at De La Salle Lipa,
-              specializing in <strong>System Development</strong>. Most of what I build starts
-              from a real, slightly annoying problem — an inventory that's tracked on paper, a
-              market with no digital presence, records scattered across notebooks — and turns it
-              into something people can actually rely on.
-            </p>
-            <p>
-              I care about the parts of software that aren't glamorous but matter most: does the
-              login flow make sense, does the dashboard tell you what you need at a glance, does
-              the system survive contact with a real user. That's where I spend most of my
-              attention.
-            </p>
-            <p>
-              Outside of coursework, I'm sharpening my web development and system analysis skills
-              through personal projects, and looking for opportunities to build alongside a team
-              on something that ships.
-            </p>
-          </Reveal>
-
-          <Reveal className="info-card">
-            <div className="info-row">
-              <span>Status</span>
-              <span style={{ color: 'var(--accent)' }}>Open to work</span>
+        <Reveal className="about-photo">
+          <figure className="photo">
+            <span className="tape" />
+            <div className="photo-img">
+              {photoFailed ? (
+                <div className="photo-fallback">LRO</div>
+              ) : (
+                <img src={profilePhoto} alt={profile.name} onError={() => setPhotoFailed(true)} />
+              )}
             </div>
-            <div className="info-row">
-              <span>Focus</span>
-              <span>System Development</span>
-            </div>
-            <div className="info-row">
-              <span>School</span>
-              <span>De La Salle Lipa</span>
-            </div>
-            <div className="info-row">
-              <span>Based in</span>
-              <span>Philippines</span>
-            </div>
-            <div className="info-row">
-              <span>GitHub</span>
-              <span>@lordwig</span>
-            </div>
-          </Reveal>
-        </div>
+            <figcaption>{profile.firstName}, 2026</figcaption>
+          </figure>
+        </Reveal>
       </div>
     </section>
   )

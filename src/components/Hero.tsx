@@ -69,6 +69,15 @@ export default function Hero() {
       const p = clamp(window.scrollY / scrollThreshold, 0, 1)
       const e = ease(p)
 
+      // On small screens skip the morph fly — just fade the photo out
+      if (window.innerWidth <= 900) {
+        photo.style.transform = 'none'
+        photo.style.opacity = String(Math.max(0, 1 - p * 2.5))
+        inner.style.borderRadius = ''
+        inner.style.aspectRatio = ''
+        return
+      }
+
       if (p >= 0.98) {
         // Fully docked: show the navbar avatar and hide the flying photo
         avatar.classList.add('docked')

@@ -68,7 +68,7 @@ export const projects: Project[] = [
       'Supabase backend for data and authentication',
       'Designed around local market vendors and buyers',
     ],
-    screenshots: ['/projects/palengkehub-1.svg', '/projects/palengkehub-2.svg'],
+    screenshots: ['/projects/palengkehub-1.png', '/projects/palengkehub-2.jpg'],
     repoUrl: 'https://github.com/shin486/PalengkeHubFinal',
     liveUrl: 'https://palengkehub.site',
   },
@@ -90,17 +90,18 @@ export const projects: Project[] = [
   },
   {
     id: '04',
-    title: 'ITELECT4 Project',
-    role: 'Solo',
-    tags: ['TypeScript'],
+    title: 'SipGo',
+    subtitle: 'Digital Café Pre-Order & Management Platform',
+    role: 'Course Project',
+    tags: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB'],
     description:
-      'A focused TypeScript exercise modeling an academic tracking system — users, courses, and submissions — built to master interfaces, generics, and utility types.',
+      'A full-stack digital pre-order and management platform designed to streamline customer ordering workflows and administrative inventory controls for café patrons and staff.',
     features: [
-      'Typed models for users, courses, and submissions',
-      'Interfaces and generics',
-      'Utility types and enums',
+      'Designed and developed a full-stack digital pre-order and management platform using React, TypeScript, Node.js, Express, and MongoDB to streamline customer ordering workflows and administrative inventory controls for café patrons and staff.',
+      'Integrated secure JWT authentication, backend request rate-limiting, and an automated AI-powered suggestion workflow to optimize item matching efficiency, accelerate transaction retrieval workflows, and enhance the overall checkout experience.',
+      'Duration: July 2026 – October 2026',
     ],
-    screenshots: ['/projects/itelect4-1.svg'],
+    screenshots: ['/projects/sipgo-1.svg'],
     repoUrl: 'https://github.com/Lordwig/itelect4-project',
   },
 ]
@@ -157,104 +158,108 @@ export const radarSkills: RadarPoint[] = [
   { label: 'System Design', value: 68 },
 ]
 
-export interface CertificateItem {
-  key: string
-  title: string
-  issuer: string
-  year: string
-  credentialId?: string
-  skills?: string[]
-  accentColor?: string
-  url?: string
+export interface CertificateInfo {
+  title?: string
+  issuer?: string
+  /** copy it from the certificate itself, e.g. 'Mar 2026' */
+  date?: string
+  /** e.g. 'Course completion', 'Seminar participation' */
+  kind?: string
 }
 
-export const defaultCertificates: CertificateItem[] = [
-  {
-    key: 'aws-cloud-practitioner',
-    title: 'AWS Certified Cloud Practitioner',
-    issuer: 'Amazon Web Services',
-    year: '2024',
-    credentialId: 'AWS-CCP-8492041',
-    skills: ['Cloud Architecture', 'AWS Core Services', 'Security'],
-    accentColor: '#ff9900',
-  },
-  {
-    key: 'meta-front-end-developer',
-    title: 'Meta Front-End Developer',
-    issuer: 'Meta / Coursera',
-    year: '2024',
-    credentialId: 'META-FE-7729108',
-    skills: ['React.js', 'TypeScript', 'UI/UX Design'],
-    accentColor: '#3b5bff',
-  },
-  {
-    key: 'database-design-postgresql',
-    title: 'Database Design & PostgreSQL',
-    issuer: 'Oracle Academy',
-    year: '2023',
-    credentialId: 'DB-SQL-4091832',
-    skills: ['PostgreSQL', 'Relational Schemas', 'SQL Tuning'],
-    accentColor: '#5cc689',
-  },
-  {
-    key: 'it-specialist-software-dev',
-    title: 'IT Specialist: Software Dev',
-    issuer: 'Certiport / Pearson VUE',
-    year: '2023',
-    credentialId: 'ITS-SD-5819024',
-    skills: ['Software Design', 'OOP', 'Data Structures'],
-    accentColor: '#ff6f4e',
-  },
-]
-
-export const certificateInfo: Record<
-  string,
-  { title?: string; issuer?: string; year?: string; credentialId?: string; skills?: string[] }
-> = {
+/**
+ * Details shown under each certificate in src/assets/certs/.
+ * The key is the image file name WITHOUT the extension.
+ * Only write facts that are printed on the certificate itself.
+ */
+export const certificateInfo: Record<string, CertificateInfo> = {
   'CYBER THREAT MANAGEMENT': {
     title: 'Cyber Threat Management',
     issuer: 'Cisco Networking Academy',
-    year: '2026',
-    credentialId: 'CSCO-CTM-VERIFIED',
-    skills: ['Cyber Defense', 'Vulnerability Assessment', 'Incident Response'],
+    date: 'Mar 2026',
+    kind: 'Course completion',
   },
   'Innovative Research Horizons': {
     title: 'Innovative Research Horizons',
-    issuer: 'DLSL ACES · De La Salle Lipa',
-    year: '2026',
-    credentialId: 'DLSL-IRH-2026',
-    skills: ['Academic Research', 'Technical Innovation', 'Systems Engineering'],
+    issuer: 'DLSL ACES · IECEP-DLSL SC · JPCS',
+    date: 'Feb 2026',
+    kind: 'Seminar participation',
   },
   'SKILLS TO SUCCEED': {
     title: 'Skills to Succeed Academy',
     issuer: 'Accenture',
-    year: '2026',
-    credentialId: 'ACN-S2S-58MOD',
-    skills: ['Professional Enablement', 'Career Readiness', 'Soft Skills'],
+    date: 'Feb 2026',
+    kind: '58 learning modules completed',
   },
   USAID: {
     title: 'AI Ethics and Governance',
     issuer: 'USAID · Asia Open RAN Academy',
-    year: '2024',
-    credentialId: 'USAID-IPOP-2024',
-    skills: ['AI Ethics', 'AI Governance', 'Open RAN Architecture'],
+    date: 'Oct 2024',
+    kind: 'Webinar participation',
   },
-  usaid: {
-    title: 'AI Ethics and Governance',
-    issuer: 'USAID · Asia Open RAN Academy',
-    year: '2024',
-    credentialId: 'USAID-IPOP-2024',
-    skills: ['AI Ethics', 'AI Governance', 'Open RAN Architecture'],
+  'python-1': {
+    title: 'Python Essentials 1',
+    issuer: 'Cisco Networking Academy',
+    date: 'Feb 2026',
+    kind: '30 learning modules completed',
+  },
+  'python-2': {
+    title: 'Python Essentials 2',
+    issuer: 'Cisco Networking Academy',
+    date: 'Feb 2026',
+    kind: '30 learning modules completed',
+  },
+  'pyhton-1': {
+    title: 'Python Essentials 1',
+    issuer: 'Cisco Networking Academy',
+    date: 'Feb 2026',
+    kind: '30 learning modules completed',
+  },
+  'pyhton-2': {
+    title: 'Python Essentials 2',
+    issuer: 'Cisco Networking Academy',
+    date: 'Feb 2026',
+    kind: '30 learning modules completed',
+  },
+  'phyton-1': {
+    title: 'Python Essentials 1',
+    issuer: 'Cisco Networking Academy',
+    date: 'Feb 2026',
+    kind: '30 learning modules completed',
+  },
+  'phyton-2': {
+    title: 'Python Essentials 2',
+    issuer: 'Cisco Networking Academy',
+    date: 'Feb 2026',
+    kind: '30 learning modules completed',
+  },
+  'Python 1': {
+    title: 'Python Essentials 1',
+    issuer: 'Cisco Networking Academy',
+    date: 'Feb 2026',
+    kind: '30 learning modules completed',
+  },
+  'Python 2': {
+    title: 'Python Essentials 2',
+    issuer: 'Cisco Networking Academy',
+    date: 'Feb 2026',
+    kind: '30 learning modules completed',
   },
 }
+
+/** Same idea for the honor certificates you drop into src/assets/honors/ */
+export const honorInfo: Record<string, CertificateInfo> = {
+  'honor-1': { title: 'Academic Honors', issuer: 'De La Salle Lipa', date: '2024' },
+  'honor-2': { title: 'Academic Honors', issuer: 'De La Salle Lipa', date: '2024' },
+  'honor-3': { title: 'Academic Honors', issuer: 'De La Salle Lipa', date: '2024' },
+}
+
+/** Put your photo at public/profile.png (or profile.jpg) */
+export const profilePhoto = '/profile.png'
 
 export const contact = {
   email: 'ludwigolarte@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/ludwig-rex-olarte-3bba72378/',
-  github: 'https://github.com/lordwig',
-  /** Put your resume PDF at public/resume.pdf — the button opens it in a new tab */
   resume: '/resume.pdf',
+  github: 'https://github.com/Lordwig',
+  linkedin: 'https://linkedin.com/in/ludwigrexolarte/',
 }
-
-/** Put your photo at public/profile.jpg */
-export const profilePhoto = '/profile.jpg'

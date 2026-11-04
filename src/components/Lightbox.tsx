@@ -54,7 +54,8 @@ export default function Lightbox({ items, index, onClose, onChange }: LightboxPr
         <img src={item.url} alt={item.title} />
         <figcaption>
           <strong>{item.title}</strong>
-          {(item.issuer || item.year) && <span>{[item.issuer, item.year].filter(Boolean).join(' · ')}</span>}
+          {(item.issuer || item.date) && <span>{[item.issuer, item.date].filter(Boolean).join(' · ')}</span>}
+          {item.kind && <span>{item.kind}</span>}
         </figcaption>
       </figure>
 
@@ -73,4 +74,3 @@ export default function Lightbox({ items, index, onClose, onChange }: LightboxPr
     </div>
   )
 }
-

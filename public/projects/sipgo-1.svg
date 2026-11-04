@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="sipgoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141210"/>
+      <stop offset="100%" stop-color="#0c0a09"/>
+    </linearGradient>
+    <linearGradient id="warmAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1917"/>
+      <stop offset="100%" stop-color="#171412"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#sipgoBg)"/>
+
+  <!-- Top App Navigation Bar -->
+  <rect x="0" y="0" width="1200" height="68" fill="#171412" stroke="#292524" stroke-width="1"/>
+  
+  <g transform="translate(36, 18)">
+    <rect width="32" height="32" rx="8" fill="url(#warmAmber)"/>
+    <text x="16" y="22" font-family="'Instrument Sans', sans-serif" font-size="17" font-weight="900" fill="#1c1917" text-anchor="middle">☕</text>
+    <text x="44" y="22" font-family="'Instrument Sans', sans-serif" font-size="20" font-weight="800" fill="#fafaf9" letter-spacing="-0.5">SipGo</text>
+    <rect x="115" y="6" width="90" height="20" rx="10" fill="#292524"/>
+    <text x="160" y="20" font-family="'Instrument Sans', sans-serif" font-size="10.5" font-weight="700" fill="#f59e0b" text-anchor="middle">CAFÉ PLATFORM</text>
+  </g>
+
+  <!-- Nav links -->
+  <g transform="translate(320, 38)" font-family="'Instrument Sans', sans-serif" font-size="13" font-weight="600">
+    <text x="0" y="0" fill="#f59e0b">Coffee &amp; Drinks</text>
+    <rect x="-4" y="8" width="105" height="2" fill="#f59e0b" rx="1"/>
+    <text x="140" y="0" fill="#a8a29e">Artisan Pastries</text>
+    <text x="280" y="0" fill="#a8a29e">Pre-Order Queue</text>
+    <text x="430" y="0" fill="#a8a29e">Admin Inventory</text>
+  </g>
+
+  <!-- Right user badge & cart -->
+  <g transform="translate(1010, 18)">
+    <rect width="154" height="32" rx="16" fill="#292524" stroke="#44403c" stroke-width="1"/>
+    <circle cx="18" cy="16" r="6" fill="#10b981"/>
+    <text x="32" y="20" font-family="'Instrument Sans', sans-serif" font-size="11.5" font-weight="600" fill="#e7e5e4">JWT Auth · Online</text>
+  </g>
+
+  <!-- Main Hero / Promotion Banner -->
+  <g transform="translate(36, 88)">
+    <rect width="1128" height="110" rx="16" fill="url(#cardGrad)" stroke="#292524" stroke-width="1"/>
+    <text x="32" y="42" font-family="'Fraunces', Georgia, serif" font-size="24" font-weight="700" fill="#fafaf9">Pre-Order Your Morning Roast Ahead</text>
+    <text x="32" y="70" font-family="'Instrument Sans', sans-serif" font-size="13.5" fill="#a8a29e">Skip the queue · Real-time inventory tracking · Powered by React, Express &amp; MongoDB</text>
+    
+    <g transform="translate(32, 82)">
+      <rect width="84" height="18" rx="4" fill="#292524"/>
+      <text x="42" y="13" font-family="monospace" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle">TypeScript</text>
+      <rect x="94" y="0" width="60" height="18" rx="4" fill="#292524"/>
+      <text x="124" y="13" font-family="monospace" font-size="10" font-weight="700" fill="#4ade80" text-anchor="middle">Node.js</text>
+      <rect x="164" y="0" width="70" height="18" rx="4" fill="#292524"/>
+      <text x="199" y="13" font-family="monospace" font-size="10" font-weight="700" fill="#f59e0b" text-anchor="middle">MongoDB</text>
+    </g>
+
+    <!-- Pre-Order Status Pill -->
+    <g transform="translate(930, 36)">
+      <rect width="166" height="40" rx="20" fill="url(#warmAmber)"/>
+      <text x="83" y="25" font-family="'Instrument Sans', sans-serif" font-size="13" font-weight="800" fill="#1c1917" text-anchor="middle">START PRE-ORDER ↗</text>
+    </g>
+  </g>
+
+  <!-- Left Content: Menu Cards Grid -->
+  <!-- Drink 1: Spanish Latte -->
+  <g transform="translate(36, 218)">
+    <rect width="360" height="236" rx="14" fill="url(#cardGrad)" stroke="#292524" stroke-width="1"/>
+    <rect x="14" y="14" width="332" height="100" rx="10" fill="#292524"/>
+    <text x="180" y="66" font-family="'Instrument Sans', sans-serif" font-size="36" text-anchor="middle">☕</text>
+    <rect x="24" y="24" width="76" height="20" rx="10" fill="#141210" fill-opacity="0.8"/>
+    <text x="62" y="38" font-family="'Instrument Sans', sans-serif" font-size="10" font-weight="700" fill="#f59e0b" text-anchor="middle">POPULAR</text>
+
+    <text x="18" y="142" font-family="'Instrument Sans', sans-serif" font-size="16" font-weight="700" fill="#fafaf9">Iced Spanish Latte</text>
+    <text x="18" y="162" font-family="'Instrument Sans', sans-serif" font-size="12" fill="#a8a29e">Double espresso shot, condensed milk, fresh milk</text>
+    <text x="18" y="210" font-family="'Instrument Sans', sans-serif" font-size="18" font-weight="800" fill="#f59e0b">₱160.00</text>
+    <rect x="250" y="190" width="96" height="30" rx="8" fill="#292524" stroke="#44403c" stroke-width="1"/>
+    <text x="298" y="210" font-family="'Instrument Sans', sans-serif" font-size="11.5" font-weight="700" fill="#fafaf9" text-anchor="middle">+ Add to Order</text>
+  </g>
+
+  <!-- Drink 2: Cold Brew Tonic -->
+  <g transform="translate(420, 218)">
+    <rect width="360" height="236" rx="14" fill="url(#cardGrad)" stroke="#292524" stroke-width="1"/>
+    <rect x="14" y="14" width="332" height="100" rx="10" fill="#292524"/>
+    <text x="180" y="66" font-family="'Instrument Sans', sans-serif" font-size="36" text-anchor="middle">🧊</text>
+    <rect x="24" y="24" width="86" height="20" rx="10" fill="#141210" fill-opacity="0.8"/>
+    <text x="67" y="38" font-family="'Instrument Sans', sans-serif" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle">SLOW BREW</text>
+
+    <text x="18" y="142" font-family="'Instrument Sans', sans-serif" font-size="16" font-weight="700" fill="#fafaf9">Signature Cold Brew Tonic</text>
+    <text x="18" y="162" font-family="'Instrument Sans', sans-serif" font-size="12" fill="#a8a29e">18-hour cold steep with citrus zest and sparkling tonic</text>
+    <text x="18" y="210" font-family="'Instrument Sans', sans-serif" font-size="18" font-weight="800" fill="#f59e0b">₱175.00</text>
+    <rect x="250" y="190" width="96" height="30" rx="8" fill="#292524" stroke="#44403c" stroke-width="1"/>
+    <text x="298" y="210" font-family="'Instrument Sans', sans-serif" font-size="11.5" font-weight="700" fill="#fafaf9" text-anchor="middle">+ Add to Order</text>
+  </g>
+
+  <!-- Right Sidebar: AI-Powered Suggestion & Live Queue -->
+  <g transform="translate(804, 218)">
+    <rect width="360" height="500" rx="14" fill="#171412" stroke="#292524" stroke-width="1"/>
+    
+    <!-- AI Suggestion Box -->
+    <g transform="translate(18, 18)">
+      <rect width="324" height="130" rx="12" fill="#1f1c18" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.4"/>
+      <g transform="translate(14, 16)">
+        <text x="0" y="14" font-family="'Instrument Sans', sans-serif" font-size="12" font-weight="800" fill="#f59e0b" letter-spacing="1">✦ AI SMART SUGGESTION</text>
+        <text x="0" y="38" font-family="'Instrument Sans', sans-serif" font-size="12.5" fill="#fafaf9" font-weight="600">Frequently paired with Spanish Latte:</text>
+        <text x="0" y="58" font-family="'Instrument Sans', sans-serif" font-size="12" fill="#a8a29e">Butter Croissant (+₱85.00)</text>
+        <rect x="0" y="70" width="130" height="26" rx="6" fill="#f59e0b"/>
+        <text x="65" y="87" font-family="'Instrument Sans', sans-serif" font-size="11" font-weight="700" fill="#1c1917" text-anchor="middle">Add Bundle (+₱85)</text>
+      </g>
+    </g>
+
+    <!-- Active Live Order Queue -->
+    <g transform="translate(18, 170)">
+      <text x="0" y="16" font-family="'Instrument Sans', sans-serif" font-size="14" font-weight="700" fill="#fafaf9">Active Pre-Order Queue</text>
+      
+      <!-- Queue Item 1 -->
+      <g transform="translate(0, 32)">
+        <rect width="324" height="64" rx="10" fill="#1c1917" stroke="#292524" stroke-width="1"/>
+        <text x="14" y="24" font-family="'Instrument Sans', sans-serif" font-size="13" font-weight="700" fill="#fafaf9">Order #1042 · Ludwig O.</text>
+        <text x="14" y="44" font-family="'Instrument Sans', sans-serif" font-size="11" fill="#a8a29e">1x Iced Spanish Latte, 1x Butter Croissant</text>
+        <rect x="226" y="14" width="84" height="20" rx="10" fill="#047857" fill-opacity="0.25"/>
+        <text x="268" y="28" font-family="'Instrument Sans', sans-serif" font-size="9.5" font-weight="700" fill="#34d399" text-anchor="middle">PREPARING</text>
+      </g>
+
+      <!-- Queue Item 2 -->
+      <g transform="translate(0, 106)">
+        <rect width="324" height="64" rx="10" fill="#1c1917" stroke="#292524" stroke-width="1"/>
+        <text x="14" y="24" font-family="'Instrument Sans', sans-serif" font-size="13" font-weight="700" fill="#fafaf9">Order #1041 · Maria S.</text>
+        <text x="14" y="44" font-family="'Instrument Sans', sans-serif" font-size="11" fill="#a8a29e">2x Cold Brew Tonic · Pickup Ready</text>
+        <rect x="226" y="14" width="84" height="20" rx="10" fill="#0284c7" fill-opacity="0.25"/>
+        <text x="268" y="28" font-family="'Instrument Sans', sans-serif" font-size="9.5" font-weight="700" fill="#38bdf8" text-anchor="middle">READY 📦</text>
+      </g>
+
+      <!-- Security / Performance Tag -->
+      <g transform="translate(0, 190)">
+        <rect width="324" height="80" rx="10" fill="#141210" stroke="#292524" stroke-width="1"/>
+        <text x="14" y="24" font-family="'Instrument Sans', sans-serif" font-size="11" font-weight="700" fill="#a8a29e">SECURITY &amp; PERFORMANCE</text>
+        <text x="14" y="44" font-family="'Instrument Sans', sans-serif" font-size="11.5" fill="#fafaf9">✓ JWT Session Control &amp; Rate-Limiting</text>
+        <text x="14" y="64" font-family="'Instrument Sans', sans-serif" font-size="11.5" fill="#fafaf9">✓ MongoDB Aggregation Pipeline</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Drinks Row -->
+  <g transform="translate(36, 474)">
+    <rect width="360" height="244" rx="14" fill="url(#cardGrad)" stroke="#292524" stroke-width="1"/>
+    <rect x="14" y="14" width="332" height="108" rx="10" fill="#292524"/>
+    <text x="180" y="70" font-family="'Instrument Sans', sans-serif" font-size="36" text-anchor="middle">🥐</text>
+    <text x="18" y="150" font-family="'Instrument Sans', sans-serif" font-size="16" font-weight="700" fill="#fafaf9">Almond Butter Croissant</text>
+    <text x="18" y="170" font-family="'Instrument Sans', sans-serif" font-size="12" fill="#a8a29e">Flaky layered pastry with roasted almond frangipane</text>
+    <text x="18" y="218" font-family="'Instrument Sans', sans-serif" font-size="18" font-weight="800" fill="#f59e0b">₱95.00</text>
+    <rect x="250" y="198" width="96" height="30" rx="8" fill="#292524" stroke="#44403c" stroke-width="1"/>
+    <text x="298" y="218" font-family="'Instrument Sans', sans-serif" font-size="11.5" font-weight="700" fill="#fafaf9" text-anchor="middle">+ Add to Order</text>
+  </g>
+
+  <g transform="translate(420, 474)">
+    <rect width="360" height="244" rx="14" fill="url(#cardGrad)" stroke="#292524" stroke-width="1"/>
+    <rect x="14" y="14" width="332" height="108" rx="10" fill="#292524"/>
+    <text x="180" y="70" font-family="'Instrument Sans', sans-serif" font-size="36" text-anchor="middle">🍵</text>
+    <text x="18" y="150" font-family="'Instrument Sans', sans-serif" font-size="16" font-weight="700" fill="#fafaf9">Ceremonial Uji Matcha Latte</text>
+    <text x="18" y="170" font-family="'Instrument Sans', sans-serif" font-size="12" fill="#a8a29e">Stone-ground Kyoto matcha with creamy oat milk</text>
+    <text x="18" y="218" font-family="'Instrument Sans', sans-serif" font-size="18" font-weight="800" fill="#f59e0b">₱185.00</text>
+    <rect x="250" y="198" width="96" height="30" rx="8" fill="#292524" stroke="#44403c" stroke-width="1"/>
+    <text x="298" y="218" font-family="'Instrument Sans', sans-serif" font-size="11.5" font-weight="700" fill="#fafaf9" text-anchor="middle">+ Add to Order</text>
+  </g>
+</svg>

@@ -116,7 +116,9 @@ export default function Hero() {
           <p className="hero-kicker">
             {profile.role} · {profile.school}
           </p>
-
+      <div className="hero-word" aria-hidden="true" data-parallax data-depth="0.22" data-mx="60" data-my="30" data-fade>
+        LUDWIG
+      </div>
           <h1 className="hero-title">
             I build{' '}
             <span className="word-wrap" style={{ width: wordWidth }}>
@@ -139,7 +141,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-photo" ref={photoRef}>
+            <div className="hero-photo" ref={photoRef} data-parallax data-depth="0" data-mx="-24" data-my="-16" data-fade>
           <div className="hero-photo-inner" ref={innerRef}>
             {photoFailed ? (
               <span className="hero-photo-fallback">LRO</span>

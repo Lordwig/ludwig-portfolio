@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 
 const SPACING = 34
+const FAR_SPACING = 26
 const RADIUS = 150
 const PUSH = 16
 const INK = '236, 236, 241'
@@ -26,6 +27,7 @@ export default function Background() {
     let active = false
     let running = false
     let raf = 0
+    let farX = 0
     const mouse = { x: 0, y: 0 }
     const smooth = { x: 0, y: 0 }
     const rings: Ring[] = []
@@ -41,7 +43,22 @@ export default function Background() {
 
     const draw = () => {
       ctx.clearRect(0, 0, w, h)
-      const offY = -((scrollY * 0.18) % SPACING)
+      // far layer: tiny faint dots that drift slowly and lean away from the cursor (adds depth)
+      const farOffY = -((scrollY * 0.07) % FAR_SPACING)
+      const far = new Path2D()
+      for (let r = -1; r < Math.ceil(h / FAR_SPACING) + 2; r++) {
+        for (let c = -1; c < Math.ceil(w / FAR_SPACING) + 2; c++) {
+          const fx = c * FAR_SPACING + FAR_SPACING / 2 + (farX % FAR_SPACING)
+          const fy = r * FAR_SPACING + FAR_SPACING / 2 + farOffY
+          far.moveTo(fx + 0.8, fy)
+          far.arc(fx, fy, 0.8, 0, Math.PI * 2)
+        }
+      }
+      ctx.fillStyle = `rgba(${INK}, 0.07)`
+      ctx.fill(far)
+
+      // near layer: the interactive grid, moving a little faster
+      const offY = -((scrollY * 0.26) % SPACING)
       const base = new Path2D()
 
       for (let r = -1; r < Math.ceil(h / SPACING) + 2; r++) {
@@ -89,7 +106,10 @@ export default function Background() {
       smooth.x += (mouse.x - smooth.x) * 0.14
       smooth.y += (mouse.y - smooth.y) * 0.14
       draw()
-      const settled = Math.abs(mouse.x - smooth.x) < 0.3 && Math.abs(mouse.y - smooth.y) < 0.3
+      const farTarget = active ? (w / 2 - mouse.x) * 0.02 : 0
+      farX += (farTarget - farX) * 0.08
+      const settled =
+        Math.abs(mouse.x - smooth.x) < 0.3 && Math.abs(mouse.y - smooth.y) < 0.3 && Math.abs(farTarget - farX) < 0.05
       if (settled && rings.length === 0) {
         running = false
       } else {

@@ -12,6 +12,8 @@ import Footer from './components/Footer'
 import CommandMenu from './components/CommandMenu'
 import CornerShape from './components/CornerShape'
 import Loader from './components/Loader'
+import Parallax from './components/Parallax'
+import Cursor from './components/Cursor'
 
 export default function App() {
   return (
@@ -32,6 +34,8 @@ export default function App() {
       <Footer />
       <CommandMenu />
       <CornerShape />
+      <Parallax />
+      <Cursor />
     </>
   )
 }

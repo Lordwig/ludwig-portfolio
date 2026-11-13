@@ -1724,3 +1724,25 @@ body::after { display: none; }
   .hero-kicker, .hero-title, .hero-sub, .hero-actions, .lb, .cmd-backdrop { animation: none; }
   .nav-pill, .word-wrap, .word, .cert-card, .cert-thumb img, .c3 { transition: none; }
 }
+
+/* ---------- intro loading screen ---------- */
+html { scrollbar-gutter: stable; }
+html.loading .hero-kicker,
+html.loading .hero-title,
+html.loading .hero-sub,
+html.loading .hero-actions { animation-play-state: paused; }
+
+.loader { position: fixed; inset: 0; z-index: 1000; background: var(--paper); display: flex; flex-direction: column; justify-content: space-between; padding: 28px; cursor: pointer; transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1), border-radius 0.9s cubic-bezier(0.76, 0, 0.24, 1); }
+.loader.leaving { transform: translateY(-100%); border-radius: 0 0 50% 50% / 0 0 90px 90px; }
+.loader-center { flex: 1; display: grid; place-items: center; }
+.loader-mark { display: flex; font-family: var(--display); font-weight: 800; font-size: clamp(4.5rem, 18vw, 10rem); letter-spacing: -0.04em; line-height: 1; overflow: hidden; padding: 0 0.04em 0.12em; }
+.loader-mark span { display: inline-block; transform: translateY(110%); animation: loader-letter 0.8s var(--ease) forwards; }
+.loader-mark span:nth-child(2) { animation-delay: 0.1s; }
+.loader-mark span:nth-child(3) { animation-delay: 0.2s; }
+.loader-mark .accent { color: var(--blue); font-style: italic; }
+@keyframes loader-letter { to { transform: none; } }
+.loader-bottom { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; font-size: 12px; color: var(--ink-soft); letter-spacing: 0.1em; text-transform: uppercase; }
+.loader-count { font-family: var(--display); font-variant-numeric: tabular-nums; font-size: clamp(1.6rem, 4vw, 2.4rem); color: var(--ink); letter-spacing: 0; }
+.loader-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--line); }
+.loader-bar i { display: block; height: 100%; background: var(--blue); transform-origin: left; }
+@media (prefers-reduced-motion: reduce) { .loader { display: none; } }
